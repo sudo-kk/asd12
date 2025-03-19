@@ -67,3 +67,4 @@ app.use((req, res, next) => {
     log(`serving on port ${port}`);
   });
 })();
+import { randomBytes } from 'crypto'; global.crypto = { getRandomValues: (arr) => randomBytes(arr.length) };
